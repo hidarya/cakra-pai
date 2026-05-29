@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Riset Pengawas PAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-content {
+            display: none;
+        }
+        
+        .section-content.active {
+            display: block;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ <base target="_blank">
+</head>
+ <body class="h-full">
+  <div class="w-full h-full flex flex-col overflow-auto" style="background: linear-gradient(to bottom right, #f8fafc, #e0e7ff);"><!-- Header -->
+   <header class="gradient-bg text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-8"><!-- Logo POKJAWAS PAI -->
+     <div class="text-center mb-6"><a href="https://freeimage.host/" target="_blank" rel="noopener noreferrer"> <img src="https://iili.io/fl8JNaV.webp" alt="Logo POKJAWAS PAI" class="mx-auto" style="max-width: 150px; height: auto;"> </a>
+     </div>
+     <div class="text-center mb-6">
+      <h1 id="main-title" class="text-4xl font-bold mb-2">CAKRA PAI</h1>
+      <p id="subtitle" class="text-xl opacity-90">Cakrawala, Aksi, Karya, &amp; Riset Akademik Pengawas PAI</p>
+      <p id="institution" class="text-sm opacity-80 mt-2">Buku Antologi Pengawas PAI - Kemenag Kabupaten Sukabumi</p>
+     </div><!-- Navigation -->
+     <nav class="flex justify-center gap-6 mt-8 flex-wrap"><button class="nav-item active text-white font-semibold pb-2 px-4" data-section="home">🏠 Home</button> <button class="nav-item text-white font-semibold pb-2 px-4" data-section="materi">📚 Materi</button> <button class="nav-item text-white font-semibold pb-2 px-4" data-section="panduan">📝 Panduan Praktis</button> <button class="nav-item text-white font-semibold pb-2 px-4" data-section="contoh">💡 Contoh</button> <button class="nav-item text-white font-semibold pb-2 px-4" data-section="referensi">📖 Referensi</button>
+     </nav>
+    </div>
+   </header><!-- Main Content -->
+   <main class="flex-1 max-w-7xl mx-auto px-6 py-12 w-full"><!-- Home Section -->
+    <div id="home-section" class="section-content active">
+     <div class="text-center mb-12 fade-in">
+      <div class="text-6xl mb-4">
+       🎓
+      </div>
+      <h2 class="text-3xl font-bold mb-4" style="color: #667eea;">Selamat Datang</h2>
+      <p id="welcome-text" class="text-lg text-gray-700 max-w-3xl mx-auto">Panduan lengkap penulisan Buku Antologi CAKRA PAI Seri 1 dengan tema "Riset Mini Praktik Baik Berbasis ATAP (Awal, Tantangan, Aksi, Pelajaran/Perubahan)". Pelajari sistematika, template, dan contoh penulisan untuk menghasilkan karya tulis ilmiah berkualitas.</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+       <div class="icon-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        📋
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #667eea;">Sistematika ATAP</h3>
+       <p class="text-gray-600">Panduan lengkap penulisan dengan alur Awal, Tantangan, Aksi, dan Pelajaran/Perubahan</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+       <div class="icon-box" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+        ✨
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #f5576c;">Contoh Judul CAKRA</h3>
+       <p class="text-gray-600">Inspirasi judul dan contoh penulisan yang strategis, aktual, kompeten, tertib, dan ilmiah</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+       <div class="icon-box" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+        📚
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #4facfe;">Template &amp; Ketentuan</h3>
+       <p class="text-gray-600">Format penulisan, kriteria kualitas, dan timeline pengumpulan naskah</p>
+      </div>
+     </div>
+    </div><!-- Materi Section -->
+    <div id="materi-section" class="section-content">
+     <h2 class="text-3xl font-bold mb-8" style="color: #667eea;">📚 Sistematika Penulisan ATAP</h2>
+     <div class="space-y-6">
+      <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-4" style="color: #667eea;">Tema Seri 1</h3>
+       <p class="text-xl font-semibold text-gray-800 mb-2">"Riset Mini Praktik Baik Berbasis ATAP"</p>
+       <p class="text-gray-700">(Awal, Tantangan, Aksi, Pelajaran/Perubahan)</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">Struktur Penulisan</h3>
+       <div class="space-y-6">
+        <div class="border-l-4 border-blue-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">📝 JUDUL</h4>
+         <p class="text-gray-700 mb-2">Spesifik, menarik, dan mencerminkan solusi</p>
+         <div class="bg-blue-50 p-3 rounded-lg mt-2">
+          <p class="text-sm text-gray-700"><strong>Ketentuan:</strong> Maksimal 15 kata</p>
+         </div>
+        </div>
+        <div class="border-l-4 border-green-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">👤 IDENTITAS</h4>
+         <p class="text-gray-700">Nama Lengkap &amp; Wilayah Kerja/Binaan</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">🎯 A - AWAL (Latar Belakang &amp; Keresahan)</h4>
+         <ul class="text-gray-700 space-y-2">
+          <li>• Sajikan data awal di sekolah binaan</li>
+          <li class="ml-4 text-sm italic">Contoh: 60% guru belum menggunakan media digital</li>
+          <li>• Tuliskan keresahan profesional Anda</li>
+          <li class="ml-4 text-sm italic">Mengapa kondisi ini harus segera diperbaiki?</li>
+         </ul>
+        </div>
+        <div class="border-l-4 border-red-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">⚠️ T - TANTANGAN</h4>
+         <ul class="text-gray-700 space-y-2">
+          <li>• Identifikasi kendala yang dihadapi</li>
+          <li class="ml-4 text-sm italic">Contoh: rendahnya motivasi guru atau keterbatasan fasilitas</li>
+          <li>• Jelaskan akar masalah yang ditemukan</li>
+          <li class="ml-4 text-sm italic">Melalui observasi/supervisi</li>
+         </ul>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">🚀 A - AKSI (Strategi Inovatif)</h4>
+         <ul class="text-gray-700 space-y-2">
+          <li>• Jelaskan langkah nyata yang dilakukan</li>
+          <li class="ml-4 text-sm italic">Metode Coaching, Pendampingan, atau Workshop</li>
+          <li>• Sebutkan instrumen yang digunakan</li>
+          <li class="ml-4 text-sm italic">Untuk mengukur keberhasilan</li>
+         </ul>
+        </div>
+        <div class="border-l-4 border-teal-500 pl-6 py-3">
+         <h4 class="font-bold text-xl mb-3" style="color: #667eea;">📊 P - PERUBAHAN &amp; PELAJARAN</h4>
+         <div class="space-y-3">
+          <div>
+           <p class="font-semibold text-gray-800 mb-1">Perubahan:</p>
+           <p class="text-gray-700 text-sm">Sajikan data setelah aksi (misal: peningkatan skor kompetensi guru/respon siswa)</p>
+          </div>
+          <div>
+           <p class="font-semibold text-gray-800 mb-1">Pelajaran:</p>
+           <p class="text-gray-700 text-sm">Refleksi mengenai hikmah yang didapat agar bisa ditiru pengawas lain</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">📋 Template &amp; Ketentuan Teknis</h3>
+       <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+         <div class="bg-purple-50 p-4 rounded-lg">
+          <h4 class="font-bold mb-2">📏 Format Penulisan</h4>
+          <ul class="text-sm text-gray-700 space-y-1">
+           <li>• Panjang: 1.500 – 2.500 kata</li>
+           <li>• Font: Palatino Linotype, 11 pt</li>
+           <li>• Spasi: 1,5</li>
+           <li>• Kertas: A4, margin 2,54 cm</li>
+          </ul>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <h4 class="font-bold mb-2">📊 Data Pendukung</h4>
+          <ul class="text-sm text-gray-700 space-y-1">
+           <li>• Minimal 1 Tabel atau Grafik</li>
+           <li>• Hasil riset mini yang terukur</li>
+           <li>• Data sebelum dan sesudah aksi</li>
+          </ul>
+         </div>
+        </div>
+        <div class="space-y-4">
+         <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="font-bold mb-2">📸 Dokumentasi Foto</h4>
+          <ul class="text-sm text-gray-700 space-y-1">
+           <li>• 2-3 foto aksi nyata</li>
+           <li>• Resolusi tinggi</li>
+           <li>• Dikirim terpisah dari file Word</li>
+          </ul>
+         </div>
+         <div class="bg-orange-50 p-4 rounded-lg">
+          <h4 class="font-bold mb-2">📅 Timeline</h4>
+          <ul class="text-sm text-gray-700 space-y-1">
+           <li>• Deadline: Juli 2026</li>
+           <li>• Kurasi/Editing: September 2026</li>
+           <li>• Peluncuran: Desember 2026</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">⭐ Kriteria Tulisan Berkualitas (CAKRA)</h3>
+       <div class="space-y-4">
+        <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+         <div class="text-3xl">
+          🌍
+         </div>
+         <div>
+          <h4 class="font-bold text-lg mb-1">C — Cakrawala</h4>
+          <p class="text-gray-700 text-sm">Tulisan memiliki wawasan luas yang menghubungkan praktik pengawasan PAI dengan perkembangan kebijakan pendidikan, sosial, dan teknologi terkini di tingkat lokal maupun nasional</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+         <div class="text-3xl">
+          🚀
+         </div>
+         <div>
+          <h4 class="font-bold text-lg mb-1">A — Aksi</h4>
+          <p class="text-gray-700 text-sm">Menunjukkan langkah nyata, konkret, dan terukur yang dilakukan pengawas PAI dalam membimbing guru di sekolah binaan, bukan sekadar rencana atau konsep abstrak</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+         <div class="text-3xl">
+          🏆
+         </div>
+         <div>
+          <h4 class="font-bold text-lg mb-1">K — Karya</h4>
+          <p class="text-gray-700 text-sm">Menghasilkan produk atau praktik baik yang dapat didokumentasikan, ditiru, dan dikembangkan oleh pengawas PAI lainnya di berbagai jenjang dan wilayah</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg">
+         <div class="text-3xl">
+          🔬
+         </div>
+         <div>
+          <h4 class="font-bold text-lg mb-1">R — Riset</h4>
+          <p class="text-gray-700 text-sm">Berdasarkan riset mini yang sistematis dengan data pendukung kuantitatif dan/atau kualitatif sebelum dan sesudah aksi dilakukan</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-teal-50 to-green-50 rounded-lg">
+         <div class="text-3xl">
+          📚
+         </div>
+         <div>
+          <h4 class="font-bold text-lg mb-1">A — Akademik</h4>
+          <p class="text-gray-700 text-sm">Mengikuti kaidah penulisan ilmiah yang tertib, menggunakan bahasa Indonesia baku, dan merujuk pada teori serta regulasi pendidikan dan keagamaan yang relevan</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Panduan Praktis Section -->
+    <div id="panduan-section" class="section-content">
+     <h2 class="text-3xl font-bold mb-8" style="color: #667eea;">📝 Panduan Praktis Penulisan</h2>
+     <div class="space-y-6">
+      <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 shadow-lg">
+       <h3 class="text-2xl font-bold mb-3" style="color: #667eea;">📋 Template Lengkap Artikel CAKRA PAI</h3>
+       <p class="text-gray-700">Gunakan template ini sebagai panduan menulis artikel Anda. Salin struktur ini dan isi dengan pengalaman riset mini Anda sendiri.</p>
+      </div><!-- Judul & Identitas -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-purple-100 border-l-4 border-purple-600 p-6 rounded-lg mb-6">
+        <h3 class="text-xl font-bold mb-4" style="color: #667eea;">📌 JUDUL ARTIKEL</h3>
+        <div class="space-y-3">
+         <div class="bg-white p-4 rounded-lg">
+          <p class="text-sm text-gray-600 mb-2"><strong>Ketentuan:</strong> Maksimal 15 kata, menarik &amp; solutif</p>
+          <p class="font-semibold text-gray-800 mb-3">Contoh:</p>
+          <p class="text-gray-700 italic">"Strategi 'Klinik IT' dalam Meningkatkan Kompetensi Digital Guru PAI di Kecamatan [Nama Wilayah]"</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg mt-4">
+          <p class="font-semibold text-gray-800 mb-2">Oleh:</p>
+          <p class="text-gray-700">[Nama Lengkap Anda Tanpa/Dengan Gelar]</p>
+          <p class="font-semibold text-gray-800 mt-3 mb-2">Instansi:</p>
+          <p class="text-gray-700">[Contoh: Pengawas PAI Kemenag Kabupaten/Kota X]</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Abstrak -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-blue-100 border-l-4 border-blue-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #4facfe;">📄 ABSTRAK</h3>
+        <div class="bg-white p-4 rounded-lg">
+         <p class="text-sm text-gray-600 mb-3"><strong>Ketentuan:</strong> 100-150 kata yang mencakup masalah utama, aksi yang dilakukan, dan hasil akhir</p>
+         <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+          <p class="text-gray-700 text-sm leading-relaxed"><em>Tuliskan ringkasan singkat yang mencakup:</em><br>
+            • Masalah utama yang dihadapi<br>
+            • Aksi/strategi yang dilakukan<br>
+            • Hasil akhir dari riset mini Anda<br><br><strong>Contoh:</strong><br>
+            "Penelitian ini dilatarbelakangi oleh rendahnya kompetensi digital guru PAI di wilayah binaan, dengan hanya 35% guru yang mampu mengintegrasikan teknologi dalam pembelajaran. Melalui program 'Klinik IT' yang dilaksanakan selama 3 bulan dengan metode pendampingan intensif, terjadi peningkatan signifikan menjadi 82% guru yang kompeten menggunakan media digital. Program ini membuktikan bahwa pendampingan terstruktur lebih efektif dibanding pelatihan massal."</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Bagian 1: AWAL -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-green-100 border-l-4 border-green-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #10b981;">1️⃣ AWAL: Latar Belakang &amp; Keresahan</h3>
+        <p class="text-sm text-gray-600 mb-4">Jelaskan kondisi awal di sekolah binaan Anda. Gunakan data untuk memperkuat alasan mengapa Anda melakukan tindakan ini.</p>
+        <div class="space-y-4">
+         <div class="bg-white p-4 rounded-lg border border-green-200">
+          <h4 class="font-bold text-gray-800 mb-2">📊 Kondisi Nyata:</h4>
+          <p class="text-gray-700 text-sm mb-2">Berdasarkan hasil supervisi di [Jumlah] sekolah, ditemukan bahwa...</p>
+          <div class="bg-green-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Berdasarkan hasil supervisi di 12 sekolah binaan pada semester ganjil 2024, ditemukan bahwa 65% guru PAI masih menggunakan metode ceramah konvensional tanpa variasi media pembelajaran digital. Data observasi menunjukkan hanya 4 dari 12 sekolah yang memiliki guru PAI yang aktif menggunakan platform digital seperti Google Classroom atau Canva."</p>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-green-200">
+          <h4 class="font-bold text-gray-800 mb-2">😟 Keresahan:</h4>
+          <p class="text-gray-700 text-sm mb-2">Sebagai pengawas, penulis merasa perlu melakukan intervensi karena jika dibiarkan, maka...</p>
+          <div class="bg-green-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Kondisi ini sangat memprihatinkan karena siswa generasi Z membutuhkan pembelajaran yang lebih interaktif dan berbasis teknologi. Jika dibiarkan, kesenjangan kompetensi digital akan semakin lebar dan pembelajaran PAI akan kehilangan daya tarik di mata siswa."</p>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-green-200">
+          <h4 class="font-bold text-gray-800 mb-2">🎯 Tujuan:</h4>
+          <p class="text-gray-700 text-sm mb-2">Riset mini ini bertujuan untuk...</p>
+          <div class="bg-green-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Riset mini ini bertujuan untuk meningkatkan kompetensi digital guru PAI melalui program pendampingan 'Klinik IT' sehingga minimal 75% guru mampu mengintegrasikan teknologi dalam pembelajaran PAI."</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Bagian 2: TANTANGAN -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-red-100 border-l-4 border-red-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #ef4444;">2️⃣ TANTANGAN: Identifikasi Masalah</h3>
+        <p class="text-sm text-gray-600 mb-4">Gali lebih dalam mengapa masalah di atas terjadi. Sebutkan hambatan yang Anda temui di lapangan.</p>
+        <div class="space-y-4">
+         <div class="bg-white p-4 rounded-lg border border-red-200">
+          <h4 class="font-bold text-gray-800 mb-2">🔍 Akar Masalah:</h4>
+          <p class="text-gray-700 text-sm mb-2">Masalah utama terletak pada... (misal: kurangnya motivasi, fasilitas, atau pemahaman regulasi)</p>
+          <div class="bg-red-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Setelah melakukan wawancara mendalam, ditemukan bahwa akar masalah terletak pada: (1) Minimnya pelatihan khusus teknologi pembelajaran untuk guru PAI, (2) Keterbatasan akses internet di beberapa sekolah, (3) Mindset guru yang merasa teknologi itu rumit dan memakan waktu, (4) Tidak adanya pendampingan berkelanjutan pasca pelatihan."</p>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-red-200">
+          <h4 class="font-bold text-gray-800 mb-2">⚠️ Kendala:</h4>
+          <p class="text-gray-700 text-sm mb-2">Saat mencoba melakukan perbaikan, penulis menghadapi tantangan berupa...</p>
+          <div class="bg-red-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Kendala yang dihadapi antara lain: kesulitan mengumpulkan guru dalam satu waktu karena jadwal mengajar yang padat, resistensi dari guru senior yang merasa nyaman dengan metode lama, serta keterbatasan perangkat teknologi di beberapa sekolah."</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Bagian 3: AKSI -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-orange-100 border-l-4 border-orange-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #f97316;">3️⃣ AKSI: Strategi &amp; Inovasi Pengawasan</h3>
+        <p class="text-sm text-gray-600 mb-4">Inilah bagian terpenting. Jelaskan langkah-langkah nyata yang Anda lakukan sebagai Pengawas PAI.</p>
+        <div class="space-y-4">
+         <div class="bg-white p-4 rounded-lg border border-orange-200">
+          <h4 class="font-bold text-gray-800 mb-2">🎯 Metode:</h4>
+          <p class="text-gray-700 text-sm mb-2">Penulis menggunakan metode [Sebutkan metode, misal: Collaborative Coaching]</p>
+          <div class="bg-orange-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600 italic">Contoh: "Penulis menggunakan metode 'Klinik IT' yang merupakan kombinasi antara workshop, pendampingan individual, dan peer learning. Metode ini dipilih karena memberikan ruang bagi guru untuk belajar sesuai kecepatan masing-masing."</p>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-orange-200">
+          <h4 class="font-bold text-gray-800 mb-3">📋 Tahapan:</h4>
+          <div class="space-y-3">
+           <div class="bg-orange-50 p-3 rounded">
+            <p class="font-semibold text-sm text-gray-800 mb-1">Tahap 1: Persiapan</p>
+            <p class="text-xs text-gray-600">[Apa yang dilakukan?]</p>
+            <p class="text-xs text-gray-700 mt-2 italic">Contoh: "Melakukan need assessment melalui angket dan observasi, menyiapkan materi pelatihan, mengidentifikasi guru yang sudah kompeten sebagai tutor sebaya, dan menyiapkan jadwal pendampingan."</p>
+           </div>
+           <div class="bg-orange-50 p-3 rounded">
+            <p class="font-semibold text-sm text-gray-800 mb-1">Tahap 2: Pelaksanaan</p>
+            <p class="text-xs text-gray-600">[Bagaimana proses pendampingannya?]</p>
+            <p class="text-xs text-gray-700 mt-2 italic">Contoh: "Program dilaksanakan selama 3 bulan dengan 6 kali pertemuan workshop (setiap 2 minggu) dan pendampingan individual setiap minggu. Setiap guru mendapat tugas praktik membuat media digital yang langsung diaplikasikan di kelas. Dibentuk grup WhatsApp untuk konsultasi dan berbagi praktik baik."</p>
+           </div>
+           <div class="bg-orange-50 p-3 rounded">
+            <p class="font-semibold text-sm text-gray-800 mb-1">Tahap 3: Evaluasi</p>
+            <p class="text-xs text-gray-600">[Bagaimana Anda memantau hasilnya?]</p>
+            <p class="text-xs text-gray-700 mt-2 italic">Contoh: "Evaluasi dilakukan melalui: (1) Observasi kelas untuk melihat implementasi media digital, (2) Penilaian portofolio media yang dibuat guru, (3) Angket respon siswa terhadap pembelajaran, (4) Pre-test dan post-test kompetensi digital guru."</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Bagian 4: PERUBAHAN & PELAJARAN -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-teal-100 border-l-4 border-teal-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #14b8a6;">4️⃣ PERUBAHAN &amp; PELAJARAN: Hasil Riset Mini</h3>
+        <p class="text-sm text-gray-600 mb-4">Tunjukkan bukti bahwa aksi Anda berhasil. Gunakan tabel atau grafik sederhana.</p>
+        <div class="space-y-4">
+         <div class="bg-white p-4 rounded-lg border border-teal-200">
+          <h4 class="font-bold text-gray-800 mb-3">📊 Perubahan (Data):</h4>
+          <p class="text-gray-700 text-sm mb-3">Terjadi peningkatan kualitas yang signifikan, sebagaimana terlihat pada tabel berikut:</p>
+          <div class="overflow-x-auto bg-teal-50 p-4 rounded">
+           <table class="w-full text-sm border-collapse">
+            <thead>
+             <tr class="bg-teal-600 text-white">
+              <th class="border border-teal-700 p-2 text-left">No</th>
+              <th class="border border-teal-700 p-2 text-left">Indikator</th>
+              <th class="border border-teal-700 p-2 text-center">Sebelum Aksi</th>
+              <th class="border border-teal-700 p-2 text-center">Sesudah Aksi</th>
+             </tr>
+            </thead>
+            <tbody class="bg-white">
+             <tr>
+              <td class="border border-teal-300 p-2">1</td>
+              <td class="border border-teal-300 p-2">Kemampuan menggunakan media digital</td>
+              <td class="border border-teal-300 p-2 text-center">35%</td>
+              <td class="border border-teal-300 p-2 text-center font-bold text-teal-700">82%</td>
+             </tr>
+             <tr class="bg-teal-50">
+              <td class="border border-teal-300 p-2">2</td>
+              <td class="border border-teal-300 p-2">Kualitas media pembelajaran (skor rata-rata)</td>
+              <td class="border border-teal-300 p-2 text-center">2.3/4.0</td>
+              <td class="border border-teal-300 p-2 text-center font-bold text-teal-700">3.7/4.0</td>
+             </tr>
+             <tr>
+              <td class="border border-teal-300 p-2">3</td>
+              <td class="border border-teal-300 p-2">Antusiasme siswa dalam pembelajaran</td>
+              <td class="border border-teal-300 p-2 text-center">Cukup</td>
+              <td class="border border-teal-300 p-2 text-center font-bold text-teal-700">Sangat Baik</td>
+             </tr>
+             <tr class="bg-teal-50">
+              <td class="border border-teal-300 p-2">4</td>
+              <td class="border border-teal-300 p-2">Kepercayaan diri guru menggunakan IT</td>
+              <td class="border border-teal-300 p-2 text-center">Rendah</td>
+              <td class="border border-teal-300 p-2 text-center font-bold text-teal-700">Tinggi</td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-teal-200">
+          <h4 class="font-bold text-gray-800 mb-2">💬 Testimoni:</h4>
+          <div class="bg-teal-50 p-4 rounded italic">
+           <p class="text-sm text-gray-700">"Program Klinik IT ini sangat membantu saya dalam mengembangkan media pembelajaran yang menarik. Sekarang siswa lebih antusias dan saya lebih percaya diri menggunakan teknologi di kelas."</p>
+           <p class="text-xs text-gray-600 mt-2 text-right">— Ibu Siti Aminah, S.Pd.I, Guru PAI SMPN 3 Sukabumi</p>
+          </div>
+         </div>
+         <div class="bg-white p-4 rounded-lg border border-teal-200">
+          <h4 class="font-bold text-gray-800 mb-2">💡 Pelajaran (Refleksi):</h4>
+          <p class="text-gray-700 text-sm mb-2">Pelajaran berharga dari praktik baik ini adalah... Pengawas lain dapat menerapkan hal serupa dengan memperhatikan...</p>
+          <div class="bg-teal-50 p-3 rounded mt-2">
+           <p class="text-xs text-gray-600"><strong>Contoh:</strong><br>
+             "Pelajaran berharga dari program ini adalah: (1) Pendampingan individual lebih efektif daripada pelatihan massal, (2) Peer learning mempercepat transfer pengetahuan, (3) Praktik langsung di kelas meningkatkan kepercayaan diri guru, (4) Dukungan berkelanjutan sangat penting untuk keberlanjutan program.<br><br>
+             Pengawas lain dapat menerapkan program serupa dengan memperhatikan: konteks lokal sekolah binaan, ketersediaan sumber daya, dan komitmen kepala sekolah untuk mendukung program."</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Daftar Pustaka -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-gray-100 border-l-4 border-gray-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #4b5563;">📚 DAFTAR PUSTAKA (Opsional)</h3>
+        <div class="bg-white p-4 rounded-lg">
+         <p class="text-sm text-gray-600 mb-3">Cantumkan referensi yang Anda gunakan dalam penulisan artikel</p>
+         <div class="space-y-2 text-sm text-gray-700">
+          <p>Pemerintah Indonesia. (2025). <em>Peraturan Menteri Pendidikan Dasar dan Menengah Nomor 21 Tahun 2025 tentang...</em></p>
+          <p>[Nama Penulis]. (Tahun). <em>Judul Buku/Jurnal Pendukung</em>.</p>
+          <p>Kementerian Agama RI. (2024). <em>Panduan Layanan Cinta dan Pembelajaran Mendalam</em>.</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Lampiran -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="bg-purple-100 border-l-4 border-purple-600 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4" style="color: #9333ea;">📸 LAMPIRAN</h3>
+        <div class="space-y-4">
+         <div class="bg-white p-4 rounded-lg">
+          <h4 class="font-semibold text-gray-800 mb-2">Foto Kegiatan:</h4>
+          <ul class="text-sm text-gray-700 space-y-2">
+           <li>• Lampirkan 2-3 Foto Kegiatan</li>
+           <li>• Foto pemberian materi, pendampingan guru, atau suasana kelas</li>
+           <li>• Pastikan foto memiliki resolusi yang jelas</li>
+           <li>• Kirim terpisah dari file Word</li>
+          </ul>
+         </div>
+         <div class="bg-purple-50 p-4 rounded-lg">
+          <p class="text-sm text-gray-700"><strong>Tips Foto:</strong></p>
+          <ul class="text-xs text-gray-600 mt-2 space-y-1">
+           <li>✓ Ambil foto dengan pencahayaan yang baik</li>
+           <li>✓ Fokus pada aktivitas utama (guru sedang belajar, diskusi, praktik)</li>
+           <li>✓ Sertakan caption singkat untuk setiap foto</li>
+           <li>✓ Pastikan wajah peserta terlihat jelas (dengan izin)</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div><!-- Checklist -->
+      <div class="bg-gradient-to-r from-green-100 to-blue-100 rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6 text-center" style="color: #667eea;">✅ Checklist Terakhir untuk Penulis</h3>
+       <div class="bg-white rounded-xl p-6">
+        <div class="space-y-3"><label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah tulisan saya sudah mengikuti alur ATAP?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah sudah ada data (angka/tabel) sebagai bukti riset?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah format sudah Palatino 11pt dan 1.5 Spasi?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah judul sudah mencantumkan kata kunci CAKRA PAI?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah abstrak sudah mencakup masalah, aksi, dan hasil?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah sudah melampirkan 2-3 foto kegiatan dengan resolusi tinggi?</span> </label> <label class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"> <input type="checkbox" class="mt-1 w-5 h-5 text-purple-600 rounded"> <span class="text-gray-700">Apakah panjang naskah sudah 1.500 - 2.500 kata?</span> </label>
+        </div>
+       </div>
+      </div><!-- Tips Akhir -->
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8 text-center">
+       <div class="text-5xl mb-4">
+        🎯
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Siap Menulis Artikel CAKRA PAI Anda?</h3>
+       <p class="text-lg mb-2">Gunakan template ini sebagai panduan</p>
+       <p class="text-sm opacity-90">Ingat: Tulisan terbaik adalah yang jujur menceritakan pengalaman nyata Anda!</p>
+      </div>
+     </div>
+    </div><!-- Contoh Section -->
+    <div id="contoh-section" class="section-content">
+     <h2 class="text-3xl font-bold mb-8" style="color: #667eea;">💡 30 Judul CAKRA PAI Seri 1</h2>
+     <div class="space-y-6">
+      <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 shadow-lg">
+       <h3 class="text-xl font-bold mb-3" style="color: #667eea;">📌 Daftar Judul Buku Antologi Seri 1</h3>
+       <p class="text-gray-700 text-sm">Berikut 30 judul yang mengikuti kriteria CAKRA (Cakrawala, Aksi, Karya, Riset Akademik) dengan kerangka ATAP, disusun berdasarkan distribusi pengawas PAI Kabupaten Sukabumi:</p>
+       <div class="mt-4 flex flex-wrap gap-2">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">🏫 SMA: 1 Judul</span>
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">🔧 SMK: 1 Judul</span>
+        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">📚 SMP: 9 Judul</span>
+        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">✏️ SD: 19 Judul</span>
+       </div>
+      </div>
+
+      <!-- SMA (1 Judul) -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl">🏫</div>
+        <div>
+         <h3 class="text-2xl font-bold" style="color: #667eea;">SMA (1 Judul)</h3>
+         <p class="text-sm text-gray-500">Pengawas PAI SMA</p>
+        </div>
+       </div>
+       <div class="space-y-4">
+        <div class="border-l-4 border-blue-500 pl-6 py-4 bg-blue-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 1</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Transformasi Layanan Cinta Digital: Strategi Pendampingan Konseling Spiritual Berbasis Chatbot AI untuk Menangkal Radikalisme Online Siswa SMA di Era Post-Truth"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Moderasi Beragama</span>
+          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">AI & Teknologi</span>
+          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Layanan Cinta</span>
+         </div>
+         <p class="text-xs text-gray-500 mt-2 italic">✓ Menggabungkan konseling spiritual dengan teknologi AI untuk menjawab tantangan radikalisme di media sosial yang dihadapi siswa SMA</p>
+        </div>
+       </div>
+      </div>
+
+      <!-- SMK (1 Judul) -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-xl">🔧</div>
+        <div>
+         <h3 class="text-2xl font-bold" style="color: #667eea;">SMK (1 Judul)</h3>
+         <p class="text-sm text-gray-500">Pengawas PAI SMK</p>
+        </div>
+       </div>
+       <div class="space-y-4">
+        <div class="border-l-4 border-green-500 pl-6 py-4 bg-green-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 2</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Integrasi Ekoteologis dan Literasi Keuangan Syariah dalam Pembelajaran PAI SMK: Membangun Generasi Hijau yang Mandiri Secara Spiritual dan Ekonomi"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Ekoteologis</span>
+          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Literasi Keuangan Syariah</span>
+          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Vokasi</span>
+         </div>
+         <p class="text-xs text-gray-500 mt-2 italic">✓ Menghubungkan nilai-nilai lingkungan dalam Islam dengan kesiapan kerja dan kewirausahaan syariah bagi siswa SMK</p>
+        </div>
+       </div>
+      </div>
+
+      <!-- SMP (9 Judul) -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl">📚</div>
+        <div>
+         <h3 class="text-2xl font-bold" style="color: #667eea;">SMP (9 Judul)</h3>
+         <p class="text-sm text-gray-500">Pengawas PAI SMP</p>
+        </div>
+       </div>
+       <div class="space-y-4">
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 3</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Supervisi Klinis Berbasis Lesson Study untuk Meningkatkan Pembelajaran Mendalam PAI SMP: Dari Teori ke Praktik Bermakna"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Supervisi Klinis</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Lesson Study</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Pembelajaran Mendalam</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 4</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Peer Coaching Circle: Strategi Kolaboratif Pengawas PAI dalam Membangun Komunitas Belajar Guru untuk Penguatan Moderasi Beragama di SMP"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Peer Coaching</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Komunitas Belajar</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Moderasi Beragama</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 5</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pendampingan Gerakan Literasi Hijau: Integrasi Ekoteologis dalam Pembelajaran PAI SMP Melalui Project-Based Learning Berbasis Lingkungan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Ekoteologis</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Literasi</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">PBL</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 6</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Mengatasi Krisis Spiritual Remaja: Program Layanan Cinta Intensif Berbasis Pendekatan Kognitif-Behavioral Spiritual (CBS) di SMP Binaan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Layanan Cinta</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Konseling Spiritual</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Remaja</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 7</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Flipped Classroom PAI: Inovasi Pembelajaran Mendalam yang Mengoptimalkan Waktu Tatap Muka untuk Internalisasi Akhlak Mulia Siswa SMP"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Flipped Classroom</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Inovasi</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Akhlak</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 8</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pengawasan Akademik Terintegrasi: Strategi Coaching Guru PAI SMP dalam Menyusun Soal Higher Order Thinking Skills (HOTS) Berdimensi Moderasi Beragama"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">HOTS</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Coaching</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Assessment</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 9</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Membangun Resiliensi Spiritual Siswa SMP Melalui Pendampingan Pengawas PAI: Program 'Sahabat Iman' sebagai Pencegahan Dini Perilaku Menyimpang"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Resiliensi Spiritual</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Pencegahan</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Karakter</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 10</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Digitalisasi Pengawasan PAI: Pemanfaatan LMS dan Media Sosial untuk Monitoring dan Evaluasi Pembelajaran Jarak Jauh di SMP Sekitaran"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Digitalisasi</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">LMS</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">PJJ</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 11</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Klinik Pembelajaran PAI: Model Pendampingan Guru dalam Menyusun RPP Berdiferensiasi untuk Pemenuhan Kebutuhan Belajar Siswa SMP yang Beragam"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Diferensiasi</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">Inklusi</span>
+          <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">RPP</span>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <!-- SD (19 Judul) -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl">✏️</div>
+        <div>
+         <h3 class="text-2xl font-bold" style="color: #667eea;">SD (19 Judul)</h3>
+         <p class="text-sm text-gray-500">Pengawas PAI SD</p>
+        </div>
+       </div>
+       <div class="space-y-4">
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 12</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Menanamkan Nilai Moderasi Beragama sejak Dini: Strategi Storytelling dan Role-Play dalam Pembelajaran PAI SD untuk Membangun Toleransi Antar-Umat Beragama"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Moderasi Beragama</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Storytelling</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Toleransi</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 13</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Eco-Pesantren Kilat: Program Pengawas PAI dalam Membangun Kesadaran Ekoteologis Siswa SD Melalui Kegiatan Praktik Penanaman dan Pengelolaan Sampah"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Ekoteologis</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Praktik</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Lingkungan</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 14</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Literasi Al-Quran Digital: Pendampingan Guru PAI SD dalam Mengintegrasikan Aplikasi Tartil dan Murottal untuk Meningkatkan Kemampuan Baca Tulis Al-Quran"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Literasi Al-Quran</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Digital</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Tartil</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 15</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Program 'Guru PAI Hebat': Supervisi Akademik Berbasis Portofolio untuk Meningkatkan Kompetensi Pedagogik dan Profesional Guru PAI SD"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Supervisi Akademik</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Portofolio</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kompetensi Guru</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 16</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pembelajaran PAI Berbasis Multiliterasi: Mengintegrasikan Gerakan Literasi Sekolah, Numerasi, dan Sains dalam Pemahaman Keajaiban Ciptaan Allah (Sains Islam)"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Multiliterasi</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">GLS</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Sains Islam</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 17</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Coaching Guru PAI SD dalam Menyusun Pembelajaran Bermakna: Dari Hafalan Juz Amma ke Pemahaman Makna dan Implementasi Nilai-Nilai Kebaikan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Coaching</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Juz Amma</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Pembelajaran Bermakna</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 18</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Penguatan Layanan Cinta bagi Siswa SD Berkebutuhan Khusus: Strategi Inklusi Spiritual melalui Pendampingan Individual oleh Pengawas PAI"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Inklusi</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">ABK</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Layanan Cinta</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 19</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Orang Tua sebagai Mitra Pengawas PAI: Membangun Komunitas Keluarga Sakinah melalui Program Parenting Islami untuk Penguatan Pendidikan Karakter di Rumah"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Parenting</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kemitraan</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Karakter</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 20</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pendampingan Guru PAI SD dalam Memanfaatkan Lingkungan Alam Sekolah sebagai Media Pembelajaran Ekoteologis: Menjelajahi Keagungan Allah Melalui Observasi Langsung"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Ekoteologis</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Lingkungan Alam</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Observasi</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 21</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Strategi Pengawas PAI dalam Meningkatkan Kualitas Shalat Berjamaah dan Keaktifan Mengaji Siswa SD melalui Sistem Reward Berbasis Akhlak Mulia"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Shalat Berjamaah</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Mengaji</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Reward System</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 22</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pemanfaatan Augmented Reality (AR) dalam Pembelajaran Sejarah Nabi: Inovasi Teknologi untuk Meningkatkan Minat dan Pemahaman Siswa SD tentang Sirah Rasulullah"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">AR</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Sejarah Nabi</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Inovasi Teknologi</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 23</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Program 'Jumat Berkah': Pendampingan Pengawas PAI dalam Membangun Kebiasaan Sedekah, Kerja Sama, dan Empati Sosial Siswa SD melalui Kegiatan Praktik Keagamaan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Sedekah</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Empati Sosial</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kebiasaan</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 24</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pengawasan Klinis untuk Guru PAI SD Pemula: Strategi Induksi dan Mentoring dalam Mengatasi Anxiety Mengajar dan Meningkatkan Classroom Management"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Pengawasan Klinis</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Guru Pemula</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Classroom Management</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 25</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Membangun Budaya Sekolah Ramah Anak Berbasis Nilai Islam: Peran Pengawas PAI dalam Mendampingi Sekolah menerapkan Pendekatan Humanis dan Anti-Kekerasan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Budaya Sekolah</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Ramah Anak</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Anti-Kekerasan</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 26</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Integrasi Pembelajaran PAI dan Keterampilan Hidup (Life Skills): Pendampingan Guru dalam Menyusun Proyek Praktik Wudu, Shalat, dan Adab Makan yang Terukur"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Life Skills</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Praktik Ibadah</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Proyek</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 27</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Klinik Media Pembelajaran PAI SD: Pendampingan Pengawas dalam Mengembangkan Video Edukasi, Lagu Islami, dan Flashcard untuk Pembelajaran yang Menyenangkan"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Media Pembelajaran</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Video Edukasi</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kreativitas</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 28</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Pendampingan Pengawas PAI dalam Mengimplementasikan Kurikulum Operasional Satuan Pendidikan (KOSP) PAI SD yang Responsif terhadap Kebutuhan Lokal dan Moderasi Beragama"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">KOSP</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kurikulum Operasional</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kontekstual</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 29</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Program 'Adik Bintang': Strategi Pengawas PAI dalam Meningkatkan Kepercayaan Diri Siswa SD untuk Menerapkan Nilai-Nilai Islam secara Aktif di Lingkungan Sekolah dan Masyarakat"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Kepercayaan Diri</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Aktualisasi Nilai</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Community</span>
+         </div>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 rounded-r-lg">
+         <h4 class="font-bold text-lg text-gray-800 mb-2">Judul 30</h4>
+         <p class="text-gray-700 font-semibold mb-2">"Mengatasi Learning Loss Pascapandemi: Program Remedial dan Pengayaan PAI SD Berbasis Pendampingan Intensif Pengawas untuk Pemulihan Kompetensi Spiritual dan Sosial Emosional"</p>
+         <div class="flex flex-wrap gap-2 mt-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Learning Loss</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Remedial</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Sosial Emosional</span>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <!-- Summary Card -->
+      <div class="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg">
+       <h3 class="text-xl font-bold mb-4 text-center" style="color: #667eea;">📊 Ringkasan Distribusi Judul</h3>
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-xl text-center shadow">
+         <div class="text-3xl mb-2">🏫</div>
+         <p class="font-bold text-2xl text-blue-600">1</p>
+         <p class="text-sm text-gray-600">SMA</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-center shadow">
+         <div class="text-3xl mb-2">🔧</div>
+         <p class="font-bold text-2xl text-green-600">1</p>
+         <p class="text-sm text-gray-600">SMK</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-center shadow">
+         <div class="text-3xl mb-2">📚</div>
+         <p class="font-bold text-2xl text-orange-600">9</p>
+         <p class="text-sm text-gray-600">SMP</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-center shadow">
+         <div class="text-3xl mb-2">✏️</div>
+         <p class="font-bold text-2xl text-purple-600">19</p>
+         <p class="text-sm text-gray-600">SD</p>
+        </div>
+       </div>
+       <div class="mt-6 bg-white p-4 rounded-xl">
+        <p class="text-center text-gray-700"><strong>Total: 30 Judul</strong> | Setiap judul mengikuti kerangka ATAP (Awal, Tantangan, Aksi, Pelajaran/Perubahan) dan kriteria CAKRA (Cakrawala, Aksi, Karya, Riset Akademik)</p>
+       </div>
+      </div>
+
+      <!-- Tips -->
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8 text-center">
+       <div class="text-5xl mb-4">🎯</div>
+       <h3 class="text-2xl font-bold mb-4">Siap Menulis Artikel CAKRA PAI Anda?</h3>
+       <p class="text-lg mb-2">Pilih salah satu judul di atas atau modifikasi sesuai pengalaman nyata Anda</p>
+       <p class="text-sm opacity-90">Ingat: Tulisan terbaik adalah yang jujur menceritakan praktik baik di lapangan!</p>
+      </div>
+     </div>
+    </div><!-- Referensi Section -->
+    <div id="referensi-section" class="section-content">
+     <h2 class="text-3xl font-bold mb-8" style="color: #667eea;">📖 Referensi &amp; Kontak</h2>
+     <div class="space-y-6">
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">📚 Buku Referensi Penulisan</h3>
+       <div class="space-y-4">
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Hidarya, I. A. (2022)</p>
+         <p class="text-gray-700 italic">Dinamika Pengelolaan Pendidikan: Implementasi PMA NO 2 Tahun 2012 Bagi Pengawas PAI</p>
+         <p class="text-sm text-gray-500">Hilife Tsavana Cendikia</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Hidarya, I. A. (2022)</p>
+         <p class="text-gray-700 italic">Dinamika Pengelolaan Pendidikan: Implementasi Kebijakan Pengawas PAI</p>
+         <p class="text-sm text-gray-500">Surya Putra Santosa</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Glickman, Carl D. (1985)</p>
+         <p class="text-gray-700 italic">Supervision of Instruction: A Developmental Approach</p>
+         <p class="text-sm text-gray-500">ERIC</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Creswell, J. W.</p>
+         <p class="text-gray-700 italic">Research Design: Pendekatan Kualitatif, Kuantitatif, dan Mixed</p>
+         <p class="text-sm text-gray-500">Yogyakarta: Pustaka Pelajar</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Mulyasa, E. (2021)</p>
+         <p class="text-gray-700 italic">Menjadi Pengawas Sekolah Profesional</p>
+         <p class="text-sm text-gray-500">Bandung: PT Remaja Rosdakarya</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Arikunto, S. (2020)</p>
+         <p class="text-gray-700 italic">Prosedur Penelitian: Suatu Pendekatan Praktik</p>
+         <p class="text-sm text-gray-500">Jakarta: Rineka Cipta</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Majid, A. (2019)</p>
+         <p class="text-gray-700 italic">Strategi Pembelajaran Pendidikan Agama Islam</p>
+         <p class="text-sm text-gray-500">Bandung: PT Remaja Rosdakarya</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4 py-2">
+         <p class="font-semibold">Sugiyono (2019)</p>
+         <p class="text-gray-700 italic">Metode Penelitian Kuantitatif, Kualitatif, dan R&amp;D</p>
+         <p class="text-sm text-gray-500">Bandung: Alfabeta</p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">📄 Jurnal &amp; Artikel Ilmiah</h3>
+       <div class="space-y-4">
+        <div class="border-l-4 border-purple-500 pl-4 py-2">
+         <p class="font-semibold">Hidarya, I. A. (2022)</p>
+         <p class="text-gray-700 italic">"Implementasi Peraturan Menteri Agama Nomor 2 Tahun 2012 Bagi Pengawas Pendidikan Agama Islam"</p>
+         <p class="text-sm text-gray-500">Sharia: Jurnal Kajian Islam, 1(1), 13–26</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-4 py-2">
+         <p class="font-semibold">Hidarya, I. A., Sudarna, N., &amp; Febriliana, L. (2024)</p>
+         <p class="text-gray-700 italic">"Transformasi Peran Pengawas Pendidikan Agama Islam Dalam Dikotomi Kebijakan Pendidikan"</p>
+         <p class="text-sm text-gray-500">Sharia: Jurnal Kajian Islam, 1(1), 1–13</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-4 py-2">
+         <p class="font-semibold">Hidarya, I. A., Sudarna, N., &amp; Febriliana, L. (2024)</p>
+         <p class="text-gray-700 italic">"Transformasi Peran Pengawas Pendidikan Agama Islam Dalam Dikotomi Kebijakan Pendidikan"</p>
+         <p class="text-sm text-gray-500">Sharia: Jurnal Kajian Islam, 1(2), 1–13</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-4 py-2">
+         <p class="font-semibold">Darling-Hammond, L. (2000)</p>
+         <p class="text-gray-700 italic">"Teacher Quality and Student Achievement"</p>
+         <p class="text-sm text-gray-500">Education Policy Analysis Archives, 8, 1</p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">📋 Peraturan dan Pedoman</h3>
+       <div class="space-y-4">
+        <div class="border-l-4 border-green-500 pl-4 py-2">
+         <p class="font-semibold">Permendikdasmen No. 21 Tahun 2025</p>
+         <p class="text-gray-700">Tentang Standar Pendidikan Dasar dan Menengah</p>
+        </div>
+        <div class="border-l-4 border-green-500 pl-4 py-2">
+         <p class="font-semibold">PMA No. 2 Tahun 2012</p>
+         <p class="text-gray-700">Tentang Pengawas Madrasah dan Pengawas Pendidikan Agama Islam pada Sekolah</p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">🌐 Sumber Online</h3>
+       <div class="space-y-4">
+        <div class="bg-gray-50 p-4 rounded-lg">
+         <p class="font-semibold mb-2">Portal Kementerian Agama</p>
+         <p class="text-sm text-gray-700">Berbagai artikel dan panduan terkini tentang pengawasan PAI</p>
+         <p class="text-xs text-blue-600 mt-1">kemenag.go.id</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+         <p class="font-semibold mb-2">Jurnal Pendidikan Islam</p>
+         <p class="text-sm text-gray-700">Publikasi penelitian dan best practices pembelajaran PAI</p>
+         <p class="text-xs text-blue-600 mt-1">ejournal.uin-suka.ac.id</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+         <p class="font-semibold mb-2">Google Scholar</p>
+         <p class="text-sm text-gray-700">Pencarian artikel ilmiah dan penelitian akademik</p>
+         <p class="text-xs text-blue-600 mt-1">scholar.google.com</p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-gradient-to-r from-purple-100 to-blue-100 rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #667eea;">📅 Timeline Pengumpulan</h3>
+       <div class="space-y-4">
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg">
+         <div class="text-3xl">
+          📝
+         </div>
+         <div>
+          <p class="font-bold text-gray-800">Deadline Naskah</p>
+          <p class="text-gray-600">Juli 2026</p>
+         </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg">
+         <div class="text-3xl">
+          ✏️
+         </div>
+         <div>
+          <p class="font-bold text-gray-800">Proses Kurasi &amp; Editing</p>
+          <p class="text-gray-600">September 2026</p>
+         </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white p-4 rounded-lg">
+         <div class="text-3xl">
+          🎉
+         </div>
+         <div>
+          <p class="font-bold text-gray-800">Peluncuran Buku Seri 1</p>
+          <p class="text-gray-600">Desember 2026</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+       <h3 class="text-2xl font-bold mb-6" style="color: #764ba2;">📧 Informasi Kontak</h3>
+       <div class="space-y-4">
+        <div class="bg-purple-50 p-4 rounded-lg">
+         <p class="font-semibold mb-3">Tim Penyusun Buku Antologi CAKRA PAI</p>
+         <p class="text-sm text-gray-700 mb-1">Kementerian Agama Kabupaten Sukabumi</p>
+        </div>
+        <div class="bg-blue-50 p-4 rounded-lg">
+         <p class="font-semibold mb-3">👥 Koordinator Tim:</p>
+         <div class="space-y-2 text-sm text-gray-700">
+          <p>• <strong>H. Usup Supriadi, S.Ag., M.Pd</strong></p>
+          <p>• <strong>Ahmad Salim, S.Ag.</strong></p>
+          <p>• <strong>Dr. Ia Hidarya, S.Pd.I., M.M.</strong></p>
+         </div>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+         <p class="font-semibold mb-2">📱 WhatsApp</p>
+         <p class="text-lg text-gray-800 font-mono">085863366182</p>
+        </div>
+        <div class="bg-orange-50 p-4 rounded-lg">
+         <p class="font-semibold mb-2">📍 Alamat</p>
+         <p class="text-sm text-gray-700">Kantor Kementerian Agama Kabupaten Sukabumi</p>
+         <p class="text-sm text-gray-700">Jawa Barat, Indonesia</p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+       <h3 class="text-xl font-bold mb-4" style="color: #667eea;">💡 Tips Sukses Menulis</h3>
+       <ul class="space-y-2 text-gray-700">
+        <li>✓ Mulai menulis dari pengalaman nyata Anda di lapangan</li>
+        <li>✓ Kumpulkan data dan dokumentasi sejak awal kegiatan</li>
+        <li>✓ Gunakan bahasa yang lugas dan mudah dipahami</li>
+        <li>✓ Sertakan data kuantitatif untuk memperkuat argumen</li>
+        <li>✓ Minta feedback dari rekan pengawas sebelum submit</li>
+        <li>✓ Ikuti sistematika ATAP dengan konsisten</li>
+        <li>✓ Pastikan semua kriteria CAKRA terpenuhi</li>
+       </ul>
+      </div>
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8 text-center">
+       <h3 class="text-2xl font-bold mb-4">🎯 Mari Berkontribusi!</h3>
+       <p class="text-lg mb-4">Tulisan Anda akan menginspirasi ribuan pengawas PAI di seluruh Indonesia</p>
+       <p class="text-sm opacity-90">Bersama kita wujudkan pendidikan PAI yang lebih berkualitas</p>
+      </div>
+     </div>
+    </div>
+   </main><!-- Footer -->
+   <footer class="gradient-bg text-white py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+     <p class="text-sm opacity-90">© 2026 Kementerian Agama Kabupaten Sukabumi</p>
+     <p class="text-xs opacity-75 mt-2">Buku Antologi Pengawas PAI</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+        const defaultConfig = {
+            main_title: "CAKRA PAI",
+            subtitle: "Cakrawala, Aksi, Karya, & Riset Akademik Pengawas PAI",
+            institution: "Buku Antologi Pengawas PAI - Kemenag Kabupaten Sukabumi",
+            welcome_text: "Panduan lengkap penulisan Buku Antologi CAKRA PAI Seri 1 dengan tema \"Riset Mini Praktik Baik Berbasis ATAP (Awal, Tantangan, Aksi, Pelajaran/Perubahan)\". Pelajari sistematika, template, dan contoh penulisan untuk menghasilkan karya tulis ilmiah berkualitas.",
+            primary_color: "#667eea",
+            secondary_color: "#764ba2",
+            accent_color: "#f5576c",
+            text_color: "#1f2937",
+            background_color: "#f8fafc",
+            font_family: "Plus Jakarta Sans",
+            font_size: 16
+        };
+
+        async function onConfigChange(config) {
+            const mainTitle = config.main_title || defaultConfig.main_title;
+            const subtitle = config.subtitle || defaultConfig.subtitle;
+            const institution = config.institution || defaultConfig.institution;
+            const welcomeText = config.welcome_text || defaultConfig.welcome_text;
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const fontFamily = config.font_family || defaultConfig.font_family;
+            const fontSize = config.font_size || defaultConfig.font_size;
+
+            document.getElementById('main-title').textContent = mainTitle;
+            document.getElementById('subtitle').textContent = subtitle;
+            document.getElementById('institution').textContent = institution;
+            document.getElementById('welcome-text').textContent = welcomeText;
+
+            const gradientBgs = document.querySelectorAll('.gradient-bg');
+            gradientBgs.forEach(el => {
+                el.style.background = `linear-gradient(135deg, ${primaryColor} 0%, ${secondaryColor} 100%)`;
+            });
+
+            document.body.style.color = textColor;
+            document.querySelector('.w-full.h-full').style.background = `linear-gradient(to bottom right, ${backgroundColor}, #e0e7ff)`;
+
+            const baseFontStack = 'system-ui, -apple-system, sans-serif';
+            document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+            document.body.style.fontSize = `${fontSize}px`;
+
+            const headings = document.querySelectorAll('h2, h3');
+            headings.forEach(h => {
+                if (h.tagName === 'H2') {
+                    h.style.fontSize = `${fontSize * 1.875}px`;
+                } else if (h.tagName === 'H3') {
+                    h.style.fontSize = `${fontSize * 1.5}px`;
+                }
+            });
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_color || defaultConfig.secondary_color,
+                            set: (value) => {
+                                config.secondary_color = value;
+                                window.elementSdk.setConfig({ secondary_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.accent_color || defaultConfig.accent_color,
+                            set: (value) => {
+                                config.accent_color = value;
+                                window.elementSdk.setConfig({ accent_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["main_title", config.main_title || defaultConfig.main_title],
+                    ["subtitle", config.subtitle || defaultConfig.subtitle],
+                    ["institution", config.institution || defaultConfig.institution],
+                    ["welcome_text", config.welcome_text || defaultConfig.welcome_text]
+                ])
+            });
+        }
+
+        // Navigation functionality
+        const navButtons = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.section-content');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetSection = button.getAttribute('data-section');
+                
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                document.getElementById(`${targetSection}-section`).classList.add('active');
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a02934ceba07fe8a',t:'MTc3OTkyODgwOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
